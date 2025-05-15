@@ -17,7 +17,7 @@ int main() {
     } else if (temp2 - temp1 < 10) {
         std::cout << "Increase the Fryer heat before taking the third reading.\n";
     }
-
+#optimized user prompts for better clarity
     // Get the third temperature reading
     std::cout << "Enter third temperature reading: ";
     std::cin >> temp3;
