@@ -21,7 +21,7 @@ int main() {
     // Get the third temperature reading
     std::cout << "Enter third temperature reading: ";
     std::cin >> temp3;
-
+# included final temperature range verification for fring readiness
     // Check if the final temperature is within the correct frying range
     if (temp3 >= 150 && temp3 <= 190) {
         std::cout << "You may start frying the Magwinyas.\n";
