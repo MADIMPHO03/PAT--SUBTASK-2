@@ -10,7 +10,7 @@ int main() {
     // Get the second temperature reading
     std::cout << "Enter second temperature reading: ";
     std::cin >> temp2;
-
+#added checks for gradual heating adjustments
     // Check the difference between first and second reading
     if (temp2 - temp1 > 50) {
         std::cout << "Reduce fryer heat before taking the third reading.\n";
