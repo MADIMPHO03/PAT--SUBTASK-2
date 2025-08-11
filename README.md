@@ -32,3 +32,34 @@ int main() {
     return 0;
 }
 
+#include <iostream>
+#include <string>
+#include <cctype>
+using namespace std;
+
+// Morse code for A-Z using '.' (ASCII 46) and '-' (ASCII 45)
+string morse[] = {
+    ".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---",
+    "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-",
+    "..-", "...-", ".--", "-..-", "-.--", "--.."
+};
+
+int main() {
+    string msg;
+    cout << "Enter a short message in English: ";
+    getline(cin, msg);
+
+    string fullMorse = "";
+
+    for (char c : msg) {
+        if (isalpha(c)) {
+            c = toupper(c);
+            string code = morse[c - 'A'];
+            cout << c << ": " << code << endl;
+            fullMorse += code + "   "; // 3 spaces between letters
+        }
+    }
+
+    cout << "\nFull Morse code with spaces:\n" << fullMorse << endl;
+    return 0;
+}
