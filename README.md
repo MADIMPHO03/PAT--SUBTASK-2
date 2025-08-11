@@ -63,3 +63,41 @@ int main() {
     cout << "\nFull Morse code with spaces:\n" << fullMorse << endl;
     return 0;
 }
+
+#include <iostream>
+using namespace std;
+
+const int NUM_EXPERIMENTS = 4;
+const int NUM_READINGS = 3;
+
+int main() {
+    float readingValue, total, average;
+
+    for (int experiment = 1; experiment <= NUM_EXPERIMENTS; ++experiment) {
+        cout << "\nEXPERIMENT " << experiment << endl;
+        total = 0;
+
+        for (int reading = 1; reading <= NUM_READINGS; ++reading) {
+            cout << " Enter reading " << reading << " value: ";
+            cin >> readingValue;
+            total += readingValue;
+        }
+
+        average = total / NUM_READINGS;
+
+        // Display average
+        cout << " Average for Experiment " << experiment << ": " << average << endl;
+
+        // Evaluation logic
+        if (average < 100) {
+            cout << " Result: Below acceptable range" << endl;
+        } else if (average <= 300) {
+            cout << " Result: Within acceptable range" << endl;
+        } else {
+            cout << " Result: Above acceptable range" << endl;
+        }
+    }
+
+    cout << "\nAll experiments completed." << endl;
+    return 0;
+}
